@@ -3,8 +3,12 @@
   "name": "strapdown",
   "version": "0.6.2",
   "dependencies": {},
+  "scripts" : {
+	"grunt" : "node_modules/.bin/grunt"
+  },
   "devDependencies": {
     "grunt": "^0.4.4",
+	"grunt-cli" : "^1.2.0",
     "grunt-contrib-concat": "~0.4.0",
     "grunt-contrib-cssmin": "~0.9.0",
     "grunt-contrib-jshint": "~0.10.0",

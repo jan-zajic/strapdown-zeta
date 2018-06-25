@@ -30,14 +30,11 @@
       navbarEl = document.getElementsByClassName('navbar')[0];
 
   var markdown = markdownEl.textContent || markdownEl.innerText;
-
-  if (!markdown) {
-    var outter_md_src = markdownEl.getAttribute("src");
-    if (!outter_md_src) {
-      console.warn('No embedded Markdown found in this document for Strapdown.js to work on! Visit http://strapdown.ztx.io/ to learn more.');
-    }
-    
+  var outter_md_src = markdownEl.getAttribute("src");
+  if (outter_md_src) {
     markdown = loadOutterMD(outter_md_src);
+  } else if(!markdown || !markdown.trim()) {
+    console.warn('No embedded Markdown found in this document for Strapdown.js to work on! Visit http://strapdown.ztx.io/ to learn more.');
   }
 
   /*

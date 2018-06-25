@@ -54,6 +54,16 @@ your awesome markdown content goes here...
 </xmp> <script src="http://cdn.ztx.io/strapdown/strapdown.min.js"></script> </html>
 ```
 
+### Alternatively use src attribute
+
+You can points to an external script file through the src attribute:
+```html
+<!DOCTYPE html> <html> <title>Hello, Strapdown</title> <meta charset="utf-8">
+<xmp theme="cerulean" style="display:none;" src="content.md">
+</xmp> <script src="http://cdn.ztx.io/strapdown/strapdown.min.js"></script> </html>
+```
+src 	URL 	Specifies the URL of an external script file
+
 #### Choose theme
 
 You can set your favorite theme in `xmp` tag. The following themes are built-in by default.

@@ -81,7 +81,7 @@ module.exports = function (grunt) {
     });
     grunt.registerTask('build', function () {
         // grunt.task.run('jshint');    // too many errors, sadly
-        grunt.task.run('uglify');
+        //grunt.task.run('uglify');
         grunt.task.run('concat');
         grunt.task.run('cssmin');
     })

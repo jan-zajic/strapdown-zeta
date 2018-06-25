@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         uglify: {
             my_target: {
                 files: {
-                    'build/strapdown-src.min.js': ['src/strapdown.js'],
+                    //'build/strapdown-src.min.js': ['src/strapdown.js'],
                     'build/edit-src.min.js': ['src/edit.js'],
                     'build/render-src.min.js': ['src/render.js'],
                     'build/modals.min.js': ['src/modals.js'],
@@ -40,8 +40,8 @@ module.exports = function (grunt) {
                     separator: '\n',
                 },
                 // use prettify js or highlight.js by uncommenting the corresponding line
-                src: ['vendor/marked.min.js', 'vendor/highlight.pack.js', 'vendor/persist-min.js', 'build/render-src.min.js', 'build/strapdown-src.min.js'],
-                // src: ['vendor/marked.min.js', 'vendor/prettify.min.js', 'build/strapdown-src.min.js'],
+                src: ['vendor/marked.min.js', 'vendor/highlight.pack.js', 'vendor/persist-min.js', 'build/render-src.min.js', 'src/strapdown.js'],
+                // src: ['vendor/marked.min.js', 'vendor/prettify.min.js', 'src/strapdown.js'],
                 dest: 'build/strapdown.min.js'
             },
             editor: {
@@ -81,7 +81,7 @@ module.exports = function (grunt) {
     });
     grunt.registerTask('build', function () {
         // grunt.task.run('jshint');    // too many errors, sadly
-        //grunt.task.run('uglify');
+        grunt.task.run('uglify');
         grunt.task.run('concat');
         grunt.task.run('cssmin');
     })
